@@ -41,3 +41,19 @@ f1,f2,f3 = count()
 
 print f1()
 
+
+def now():
+	print "2017 - 11 - 22"
+f = now
+f()
+print f.__name__
+
+// 装饰器 还是挺难理解的
+
+def test1():
+	pass
+def test1():
+	pass
+
+
+
