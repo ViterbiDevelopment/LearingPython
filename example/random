@@ -1,0 +1,25 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+#题目：有四个数字：1、2、3、4，能组成多少个互不相同且无重复数字的三位数？各是多少？并将写入当前目录的一个文件中
+#
+
+import os
+
+# 获取当前目录
+path = os.path.abspath(os.curdir)
+
+path2 = os.path.join(path,'test.txt')
+
+file(path2,'a+')
+
+with open(path2, 'w') as f:
+	for i in xrange(1,5):
+		for j in xrange(1,5):
+			for k in xrange(1,5):
+				if (i != j & i != j & j != k):
+					s = '%s %s %s \n' % (i,j,k)
+					f.write(s)
+    				# f.write('%s %s %s \n' % (i,j,k))
+			
+		
